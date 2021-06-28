@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        body {
+            background-color: #af6565;
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 48px;
+        }
+
+        p, a {
+            font-size: 90px;
+            text-align: center;
+        }
+
+        a { background-color: #af6565;
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        </style>
+    </head>
+    <body>
+        <title>WELCOME!</title>
+        <p>Hi there! To go to the dictionary click <a href="{{url_for('dictionary')}}">here</a></p>
+        <ul>
+            {% for i in l %}
+            <li><a href="{{url_for('words', look = i)}}">{{i}}</a></li>
+            {%endfor%}
+        </ul>
+    </body>
+</html>
